@@ -15,10 +15,7 @@ TOKEN = cran.TOKEN
 async def ready():
     print("Bot is online")
 
-'''@wa.error
-async def info_error(ctx, error):
-    if MissingRequiredArgument:
-        await ctx.send('u dumb ass u need to type a name')'''
+
 
 @client.command()
 async def stockyy(ctx):
@@ -29,6 +26,11 @@ async def stock(ctx, *, company):
       print(company)
       date, stock, emote = stocky.todayStock(company)
       await ctx.send(f"{company.upper()} - Stock - {format(round(stock, 2))}, Date - {date} {emote}")
+        
+'''@stock.error
+async def info_error(ctx, error):
+    if MissingRequiredArgument:
+        await ctx.send('Invalid')'''
 
 @client.event
 async def on_command_error(ctx, error):
