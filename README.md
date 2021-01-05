@@ -1,5 +1,5 @@
 # Stocky
-A stock data info Discord Bot
+A discord bot that gives data about stocks
 
 ### Example - 
 
