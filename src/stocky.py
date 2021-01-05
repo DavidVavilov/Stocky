@@ -1,7 +1,6 @@
 import yfinance 
 import datetime
 
-
 '''
 Idea - 
 Create a Discord bot that gives stock info and notifies when stock falls or gets up
@@ -21,7 +20,9 @@ def getStocks(company):
 
    return (dataList, lastDateList)
 
+
 def todayStock(company):
+   """A function that returns data about a companys stock"""
    data = yfinance.Ticker(company)
    dat = data.history()
    before = dat.tail(2)['Close'][0]
@@ -37,4 +38,6 @@ def todayStock(company):
    
    return (date, price, emote)
 
+todayStock("MSFT")
+"""MSFT - Microsoft"""
 
