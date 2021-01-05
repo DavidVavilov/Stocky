@@ -16,7 +16,6 @@ async def ready():
     print("Bot is online")
 
 
-
 @client.command()
 async def stockyy(ctx):
     await ctx.send("Its me, Stocky")
@@ -26,11 +25,6 @@ async def stock(ctx, *, company):
       print(company)
       date, stock, emote = stocky.todayStock(company)
       await ctx.send(f"{company.upper()} - Stock - {format(round(stock, 2))}, Date - {date} {emote}")
-        
-'''@stock.error
-async def info_error(ctx, error):
-    if MissingRequiredArgument:
-        await ctx.send('Invalid')'''
 
 @client.event
 async def on_command_error(ctx, error):
